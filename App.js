@@ -1,12 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
+import LittlelemonHeader from './components/LittlelemonHeader';
+import LittlelemonFooter from './components/LittlelemonFooter';
+import WelcomeScreen from './components/Welcomescreen';
+import MenuItems from './components/MenuItems';
+
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>HELLO WORLD!</Text>
-      
+      <LittlelemonHeader/>
       <StatusBar style="auto" />
+      <WelcomeScreen/>
+      <LittlelemonFooter/>
     </View>
   );
 }
@@ -14,8 +20,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#495E57',
+    
   },
 });
