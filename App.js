@@ -3,16 +3,17 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import LittlelemonHeader from './components/LittlelemonHeader';
 import LittlelemonFooter from './components/LittlelemonFooter';
+import Logowelcome from './components/Logowelcome';
 import WelcomeScreen from './components/Welcomescreen';
 import MenuItems from './components/MenuItems';
+import LoginForm from './components/LoginForm';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <LittlelemonHeader/>
+    <WelcomeScreen/>
       <StatusBar style="auto" />
-      <WelcomeScreen/>
-      <LittlelemonFooter/>
     </View>
   );
 }
@@ -20,7 +21,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#495E57',
+    backgroundColor: 'black',
     
   },
 });
