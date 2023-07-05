@@ -8,7 +8,7 @@ import {
 Image
 } from 'react-native';
 
-export default function LoginScreen() {
+export default function LoginScreen({navigation}) {
   const [email, onChangeEmail] = useState('');
   const [password, onChangePassword] = useState('');
   const [loggedIn, onLogin] = useState(false);
@@ -17,7 +17,7 @@ export default function LoginScreen() {
     <View style={styles.container}>
       <Text style={styles.headerText}>Welcome to Little Lemon</Text>
       
-      {loggedIn && <Text style={styles.headerText}>You are logged in!</Text>}
+
 
       {!loggedIn && (
         <>
@@ -37,8 +37,8 @@ export default function LoginScreen() {
             keyboardType={'default'}
             secureTextEntry={true}
           />
-          <Pressable onPress={() => onLogin(!loggedIn)} style={styles.button}>
-            <Text style={styles.buttonText}>Log in</Text>
+          <Pressable  onPress={() => navigation.navigate('Welcome')} style={styles.button}>
+            <Text style={styles.buttonText}>Log In</Text>
           </Pressable>
         </>
       )}
@@ -49,11 +49,12 @@ export default function LoginScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor:'black',
   },
   headerText: {
     padding: 40,
     fontSize: 30,
-    color: '#EDEFEE',
+    color: 'white',
     textAlign: 'center',
   },
   regularText: {
@@ -69,7 +70,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 10,
     fontSize: 16,
-    borderColor: 'EDEFEE',
+    borderColor: '#EDEFEE',
     backgroundColor: '#EDEFEE',
   },
   button: {
@@ -88,4 +89,3 @@ const styles = StyleSheet.create({
     fontSize: 25,
   },
 });
-

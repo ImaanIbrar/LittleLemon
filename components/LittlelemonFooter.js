@@ -17,10 +17,11 @@ export default function LittlelemonHeader() {
 }
 const styles=StyleSheet.create({
   textbox:{
-    backgroundColor: '#F4CE14',
+    backgroundColor: '#EE9972',
     fontSize: 20,
     color: 'black',
     textAlign: 'center',
+  
     
   }
 
